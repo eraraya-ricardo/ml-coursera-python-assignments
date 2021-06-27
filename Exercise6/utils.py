@@ -323,7 +323,7 @@ def visualizeBoundary(X, y, model):
     pyplot.grid(False)
 
 
-def getVocabList():
+def getVocabList(directory='Data'):
     """
     Reads the fixed vocabulary list in vocab.txt and returns a cell array of the words
     %   vocabList = GETVOCABLIST() reads the fixed vocabulary list in vocab.txt
@@ -331,7 +331,7 @@ def getVocabList():
 
     :return:
     """
-    vocabList = np.genfromtxt(join('Data', 'vocab.txt'), dtype=object)
+    vocabList = np.genfromtxt(join(directory, 'vocab.txt'), dtype=object)
     return list(vocabList[:, 1].astype(str))
 
 

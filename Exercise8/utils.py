@@ -39,7 +39,7 @@ def normalizeRatings(Y, R):
     return Ynorm, Ymean
 
 
-def loadMovieList():
+def loadMovieList(dir='Data'):
     """
     Reads the fixed movie list in movie_ids.txt and returns a list of movie names.
 
@@ -49,7 +49,7 @@ def loadMovieList():
         A list of strings, representing all movie names.
     """
     # Read the fixed movieulary list
-    with open(join('Data', 'movie_ids.txt'),  encoding='ISO-8859-1') as fid:
+    with open(join(dir, 'movie_ids.txt'),  encoding='ISO-8859-1') as fid:
         movies = fid.readlines()
 
     movieNames = []
